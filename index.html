@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="bookListApp">
+<head>
+<title>How AngularJS works?</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-route.min.js"></script>
+<script src="lib/underscore-min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/myCtrl.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+</head>
+<body ng-controller="BookListItemsController">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <span class="glyphicon glyphicon-apple" style="color:#5bdb40">
+        </span>
+        {{appTitle}}
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container" ng-view>
+</div>
+</body>
+</html>

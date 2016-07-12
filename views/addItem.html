@@ -1,0 +1,33 @@
+<div class="col-xs-12">
+  <div class="jumbotron text-center">
+    <h1>Add Item Below</h1>
+  </div>
+  <form name="bookForm">
+    <p><b>Dirty:</b>{{bookForm.$dirty}}</p>
+    <p><b>Pristine:</b>{{bookForm.$pristine}}</p>
+    <p><b>Valid:</b>{{bookForm.$valid}}</p>
+
+    <div class="alert alert-danger" role="alert" ng-show="bookForm.$dirty && !bookForm.$valid">
+      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+      <span class="sr-oly">Error:</span>
+      Enter a valid book item!
+    </div>
+
+    <div class="form-group">
+      <input type="text" ng-pattern="/^[a-zA-Z]*$/" class="form-control" placeholder="Book Item" ng-model="bookItem.itemName" required>
+    </div>
+    <div class="form-group">
+      <button type="button" class="btn btn-success btn-lg btn-block" ng-click="bookForm.$valid && save()">
+        <span class="glyphicon glyphicon-pushpin"></span>
+        Save
+      </button>
+    </div>
+    <div class="form-group">
+      <a href="#/" class="btn btn-primary btn-lg btn-block">
+        <span class="glyphicon glyphicon-remove"></span>
+        Cancel
+      </a>
+    </div>
+  </form>
+
+</div>
